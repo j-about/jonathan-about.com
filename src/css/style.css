@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+.blink {
+  animation: blink ease-in-out infinite;
+}
+
+#scenery__ground {
+  background: linear-gradient(to bottom, #311040 0%, transparent 100%),
+    linear-gradient(to right, #311040 0%, #8a1b8c 100%);
+  perspective: 66.666667vh;
+  overflow: hidden;
+}
+
+@keyframes forward {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 0 100%;
+  }
+}
+
+#scenery__ground__grid {
+  background: linear-gradient(to bottom, #f24182 1px, transparent 1px),
+    linear-gradient(to right, #f24182 1px, transparent 1px);
+  transform-origin: top;
+  transform: rotateX(60deg) translateY(1px);
+  background-size: 8px 8px;
+  animation: forward 30s linear infinite;
+  @media screen(lg) {
+    background-size: 16px 16px;
+  }
+}
+
+#scenery__overlay {
+  background: linear-gradient(
+    to bottom,
+    #1c0526 0%,
+    #1c0526 2.5%,
+    #8a1b8c 25%,
+    #f2b6e8 25%,
+    transparent 37.5%
+  );
+}
