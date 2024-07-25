@@ -10,18 +10,15 @@
     />
     <link href="./css/style.css" rel="stylesheet" />
   </head>
-  <body class="h-screen w-screen">
-    <div id="scenery" class="absolute inset-x-0 inset-y-0 h-full bg-[#1C0526]">
-      <div
-        id="scenery__landscape"
-        class="relative h-2/6 w-full overflow-hidden"
-      ></div>
-      <div id="scenery__ground" class="h-4/6 w-full">
-        <div id="scenery__ground__grid" class="h-screen w-full"></div>
+  <body>
+    <div id="scenery" class="absolute inset-x-0 inset-y-0 bg-[#1C0526]">
+      <div id="scenery__landscape" class="relative h-2/6 overflow-hidden"></div>
+      <div id="scenery__ground" class="h-4/6">
+        <div id="scenery__ground__grid" class="h-screen"></div>
         <div id="scenery__overlay" class="absolute inset-x-0 inset-y-0"></div>
       </div>
     </div>
-    <div class="grid h-full place-content-center">
+    <div class="absolute inset-x-0 inset-y-0 grid place-content-center">
       <div class="relative mx-auto w-screen max-w-xs px-4 text-center">
         <img
           src="./img/profile_picture.jpg"
